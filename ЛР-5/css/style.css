@@ -1,0 +1,63 @@
+body {
+	background: repeat-y #fc0;
+}
+
+
+
+@media print {
+  	
+	* {
+		background: none;
+	}
+
+	#none {
+		display: none;
+	}
+
+	.open {
+		display: none;
+	}
+
+	.close {
+		display: none;
+	}
+
+	button {
+		display: none;
+	}
+
+	@page{
+		size: A4;
+		margin: 1cm;
+	}
+	p{
+   		orphans: 3;
+   		color: #000;
+   	 	font-size: 1.15em;
+		text-align: left;
+   }
+
+   h5{
+     	font-size: 2em;
+     	text-align: center;
+   }
+
+
+   tr{
+   	  	border: 2px solid black;
+    	box-shadow: none;
+   }
+
+   h5 {
+  page-break-inside: avoid;
+  page-break-after: avoid;
+}
+
+h5 + p {
+  page-break-before: avoid;
+  page-break-inside: avoid;
+}
+	
+	
+	
+}
