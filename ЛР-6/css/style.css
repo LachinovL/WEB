@@ -1,0 +1,115 @@
+*{
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+svg {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+
+.raketa {
+	max-width: 20vh;
+  max-height: 20vh;
+  width: 20%;
+  position: absolute;
+  left: 40%;
+  animation: flight 10s linear infinite;
+}
+
+.raketa2 {
+	max-width: 20vh;
+  max-height: 20vh;
+  width: 20%;
+  position: absolute;
+  left: 70%;
+  animation: flightt 17s linear infinite;
+  transform: rotate(180deg);
+}
+
+.sun {
+	max-width: 15vh;
+  max-height: 15vh;
+  position: absolute;
+  top: -4%;
+  left: -2%;
+  opacity: 0;
+  animation: sun 7s linear infinite alternate 5s;
+}
+
+stop {
+	animation: stop 7s linear infinite alternate 5s;
+	
+}
+
+.moon {
+	max-width: 15vh;
+  max-height: 15vh;
+  position: absolute;
+  top: 20%;
+  animation: moon 80s linear infinite;
+}
+
+
+polygon { 
+	animation: colors 5s linear infinite alternate;
+}
+
+@keyframes moon{
+	from {
+		margin-left: 100%;
+	}
+	to {
+		margin-left: -10%;
+	}
+}
+
+@keyframes flight {
+	from {
+		margin-top: 50%;
+	}
+	to {
+		margin-top: -30%;
+	}
+}
+
+@keyframes flightt {
+	from {
+		margin-top: -30%;
+	}
+	to {
+		margin-top: 50%;
+	}
+}
+
+@keyframes colors {
+	from {
+		fill: white;
+	}
+	to {
+		fill: black;
+	}
+}
+
+@keyframes sun {
+	from {
+		opacity: 0;
+	}
+	50% {
+		opacity: 0.5;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes stop {
+	50% {
+		stop-color: orange;
+	}
+	100% {
+		stop-color: yellow;
+	}
+}
