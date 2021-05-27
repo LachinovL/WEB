@@ -6,8 +6,13 @@ body {
 
 @media print {
   	
-	* {
-		background: none;
+	.u-full-width {
+		page-break-after: always;
+	}
+
+	*, *:after, *:before {
+		background: transparent !important;
+        color: #000 !important;
 	}
 
 	#none {
