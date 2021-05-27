@@ -9,6 +9,11 @@
      baseProfile="full"
      width="800" height="500"
      xmlns="http://www.w3.org/2000/svg">
+
+   <symbol id="symbol" width="110" height="110" viewBox="1 0 2 2">
+    <rect   width="50" height="50" fill="darkred" /> 
+    <circle cx="1" cy="1" r="1" />
+  </symbol>
  	
  	<rect y="10" x="10" width="150" height="90" fill="orange" /> 
 
@@ -34,6 +39,10 @@
       stroke-linecap="butt" fill="none" stroke-linejoin="miter"/>
 
       <path d="M 10 400 Q 80 490 170 400 Z" stroke="black" fill="transparent" stroke-width="8"/>
+
+      <use xlink:href="#symbol" x="450"  y="50"/>
+      <use xlink:href="#symbol" x="450"  y="250"/>
+      <use xlink:href="#symbol" x="550"  y="150"/>
 
 </svg>
 <footer>
