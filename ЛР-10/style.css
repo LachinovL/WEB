@@ -1,0 +1,34 @@
+@use "color" as c;
+@use 'sass:map';
+@use "sass:color";
+* {
+  margin: 0; }
+
+h2 {
+  background-color: #2d1a52;
+  border: 3px solid red;
+  color: red;
+  padding: 10px; }
+
+h1 {
+  background-color: lightblue;
+  border: 1px solid red;
+  color: chocolate;
+  padding: 5px; }
+
+.main {
+  display: flex;
+  justify-content: space-around; }
+  .main ul {
+    margin-top: 20px;
+    display: flex;
+    list-style: none; }
+    .main ul li {
+      width: 125;
+      color: chocolate; }
+      .main ul li a {
+        text-decoration: none; }
+        .main ul li a:hover {
+          color: red; }
+
+/*# sourceMappingURL=style.css.map */
