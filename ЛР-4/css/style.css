@@ -1,0 +1,747 @@
+ul {
+    padding: 0;
+}
+
+ul li {
+    list-style-type: none;
+    margin-top: 40px;
+}
+
+.wrapper {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+
+
+.header {
+    background-color: black;
+}
+
+.header .header-content {
+    display: flex;
+    padding: 30px 0;
+    justify-content: space-between;
+    align-content: center;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.header .header-content .item-list {
+    color: white;
+    align-self: center;
+    cursor: pointer;
+}
+
+.header-button button {
+    cursor: pointer;
+    height: 40px;
+    width: 90px;
+    background-color: rgba(0,0,0,0.2);
+    color: white;
+    border: white solid 2px;
+}
+
+
+.navbar {
+    display: none;
+}
+
+.navbar-toggler:not(:disabled):not(.disabled){
+    background-color: white;
+}
+
+.navbar-light .navbar-nav .nav-link.disabled{
+    color: white;
+    text-align: center;
+    font-family: Raleway, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 16px;
+
+    letter-spacing: 0.12em;
+}
+
+@media (max-width: 1400px) {
+    .header .header-content .contact{
+        display: none;
+    }
+    .header .wrapper{
+        min-width: 90%;
+    }
+}
+
+@media (max-width: 800px) {
+    .header .wrapper{
+        min-width: 100%;
+    }
+    .navbar {
+        position: absolute;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        width: 100%;
+        background-color: rgba(0, 120, 201, 0);
+    }
+
+    .navbar-toggler-icon{
+        color: white;
+    }
+
+    .header .header-content{
+        display: none;
+    }
+}
+
+.home {
+}
+
+
+.home {
+    background-color: #161616;
+    height: 510px;
+    padding: 70px 0;
+}
+
+.home .elements {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-gap: 50px;
+    grid-template-rows: repeat(6, 1fr);
+}
+
+.home .elements .home-card-text {
+    max-width: 430px;
+    justify-self: center;
+    align-self: center;
+    grid-row: 2/5;
+}
+
+
+.home .elements .home-card-text p {
+    font-family: Raleway, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 27px;
+    line-height: 32px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.home .elements .home-card-text button {
+    width: 214px;
+    height: 55px;
+    background: #FFE500;
+    font-family: Raleway, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: black;
+    border: #FFE500 solid 2px;
+}
+
+.home .elements .home-card-img {
+    grid-row: 1/6;
+    align-self: end;
+}
+
+.home .elements .home-card-img img {
+    width: 100%;
+}
+
+@media (max-width: 1500px) {
+    .home {
+        height: 400px;
+        padding: 0;
+    }
+    .home .elements .home-card-img img {
+        margin-bottom: -20px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .home {
+        width: 100%;
+        background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) ),url("../img/home/1.png") bottom;
+        background-size: cover;
+    }
+
+    .home .elements{
+        grid-template-rows: none;
+        height: 100%;
+        align-content: center;
+    }
+
+    .home .home-card-img{
+        display: none;
+    }
+
+    .home .elements .home-card-img {
+        grid-row: 1;
+        order: -1;
+        text-align: center;
+        align-self: center;
+    }
+
+    .home .elements .home-card-text {
+        max-width: 430px;
+        justify-self: center;
+        align-self: center;
+        grid-row: 2;
+        text-align: center;
+        z-index: 10;
+    }
+
+    .home .elements .home-card-img img {
+        width: 100%;
+        justify-self: center;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+    .home .elements{
+        grid-template-columns: none;
+        grid-gap: 0;
+    }
+
+    .home .elements .home-card-text {
+        max-width: 270px;
+        text-align: left;
+    }
+
+    .home .elements .home-card-text p {
+        font-family: Raleway,sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 35px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+    }
+    .home .elements .home-card-text button {
+        width: 170px;
+
+    }
+}
+
+
+
+.benefit {
+    background-color: #F1F2F5;
+    padding: 8% 0;
+}
+
+.benefit .title {
+    max-width: 420px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: Raleway, serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 35px;
+}
+
+.benefit .cards {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(370px, 370px));
+    grid-gap: 30px;
+    justify-content: center;
+}
+
+.benefit .cards .card {
+    justify-self: center;
+    width: 370px;
+}
+
+.benefit .cards .card:hover {
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+
+.benefit .cards .card .card-img img {
+    max-width: 100%;
+}
+
+.benefit .cards .card .card-title {
+    text-transform: uppercase;
+    padding: 30px;
+    font-family: Raleway, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 3px;
+    color: #161616;
+}
+
+@media (max-width: 420px) {
+    .benefit .cards {
+        justify-content: center;
+    }
+
+    .benefit .cards .card {
+        max-width: 300px;
+    }
+
+    .benefit .cards .card .card-img img {
+        max-width: 100%;
+    }
+}
+
+
+.advantages {
+    background-color: white;
+    padding: 60px 0;
+}
+
+.advantages .title {
+    max-width: 420px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: Raleway, serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 35px;
+}
+
+.advantages .items {
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    grid-gap: 30px;
+}
+
+.advantages .items .item {
+    max-width: 320px;
+    text-align: center;
+    display: grid;
+    grid-column-gap: 20px;
+    grid-template-columns: 50px 185px 5px;
+    justify-self: center;
+}
+
+.advantages .items .item .item-number {
+    width: 51px;
+    height: 51px;
+    background-color: #FFE500;
+    color: #000;
+    display: grid;
+    align-items: center;
+    font-family: Raleway, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 21px;
+    margin-right: 30px;
+}
+
+.advantages .items .item .item-text {
+    color: #000;
+    font-family: Raleway, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 21px;
+    text-align: left;
+    display: grid;
+    align-items: center;
+    height: 55px;
+}
+
+.item-value {
+    position: relative;
+    right: 205px;
+    bottom: 45px;
+    opacity: 0.05;
+    font-family: Raleway, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 80px;
+    line-height: 94px;
+}
+
+@media (max-width: 420px) {
+    .advantages .items .item {
+        margin-left: -22px;
+    }
+
+    .item-value {
+        display: none;
+    }
+}
+
+
+.map {
+    margin-bottom: 50px
+}
+
+.map .title {
+    max-width: 420px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: Raleway, serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 35px;
+}
+
+.map .map-img{
+    text-align: center;
+    padding: 30px 0;
+}
+
+.map img {
+    max-width: 100%;
+}
+
+
+
+.land-lease {
+    margin-top: 100px;
+}
+
+.land-lease .elements {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(399px, 1fr));
+    grid-gap: 50px;
+}
+
+.land-lease .elements .land-card-text {
+    max-width: 430px;
+    justify-self: center;
+    align-self: center;
+}
+
+.land-lease .elements .land-card-text h2 {
+    font-family: Raleway, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 35px;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.land-lease .elements .land-card-text p {
+    font-family: Raleway, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    color: #161616;
+    margin: 30px 0;
+}
+
+.land-lease .elements .land-card-text button {
+    width: 277px;
+    height: 55px;
+    background: #161616;
+    border: none;
+    font-family: Raleway, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.land-lease .elements .land-card-img {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.land-lease .elements .land-card-img img {
+    width: 100%;
+}
+
+.main {
+    display: none;
+}
+
+
+@media (max-width: 1200px) {
+    .land-lease {
+        margin-top: 50px;
+    }
+
+    .land-lease .elements {
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+
+    .land-lease .elements .land-card-img {
+        order: -1;
+    }
+
+    .land-lease .elements .land-card-img img {
+        max-width: 100%;
+    }
+
+    .land-lease .elements .land-card-text {
+        text-align: center;
+    }
+
+    .land-lease .elements .land-card-text h2 {
+        font-size: 25px;
+    }
+
+    .land-lease .elements .land-card-text p {
+        margin: 15px 0;
+    }
+
+    .main {
+        display: inline-block;
+    }
+
+    .hay {
+        display: none;
+    }
+}
+
+
+
+.warehouse-rent {
+    background-color: #161616;
+    height: 540px;
+    margin: 80px 0;
+    padding: 70px 0;
+}
+
+.warehouse-rent .elements {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-gap: 50px;
+    grid-template-rows: repeat(6, 1fr);
+}
+
+.warehouse-rent .elements .warehouse-rent-card-text {
+    max-width: 430px;
+    justify-self: center;
+    align-self: center;
+    grid-row: 2/5;
+}
+
+.warehouse-rent .elements .warehouse-rent-card-text h2 {
+    font-family: Raleway, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 35px;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.warehouse-rent .elements .warehouse-rent-card-text p {
+    font-family: Raleway, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    color: #FFFFFF;
+    margin: 30px 0;
+}
+
+.warehouse-rent .elements .warehouse-rent-card-text button {
+    width: 277px;
+    height: 55px;
+    background: #161616;
+    font-family: Raleway, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    border: #FFFFFF solid 2px;
+}
+
+.warehouse-rent .elements .warehouse-rent-card-img {
+    grid-row: 1/6;
+    align-self: end;
+}
+
+.warehouse-rent .elements .warehouse-rent-card-img img {
+    width: 100%;
+}
+
+@media (max-width: 1500px) {
+    .warehouse-rent {
+        height: 470px;
+        padding: 0;
+    }
+}
+
+@media (max-width: 1200px) {
+    .warehouse-rent {
+        height: 80%;
+    }
+
+    .warehouse-rent .elements {
+        grid-template-columns: 1fr;
+        grid-template-rows: 45% 55%;
+        flex-direction: column;
+        padding: 40px;
+    }
+
+    .warehouse-rent .elements .warehouse-rent-card-img {
+        grid-row: 1;
+        order: -1;
+        text-align: center;
+        align-self: center;
+    }
+
+    .warehouse-rent .elements .warehouse-rent-card-text {
+        max-width: 430px;
+        justify-self: center;
+        align-self: center;
+        grid-row: 2;
+        text-align: center;
+    }
+
+    .warehouse-rent .elements .warehouse-rent-card-img img {
+        width: 100%;
+        justify-self: center;
+    }
+
+}
+
+@media (max-width: 500px) {
+    .warehouse-rent .elements {
+        grid-template-rows: 10% 85%;
+        height: 600px;
+        justify-content: center;
+    }
+
+    .warehouse-rent .elements .warehouse-rent-card-text h2 {
+        font-size: 18px;
+    }
+
+    .warehouse-rent .elements .warehouse-rent-card-text p {
+        font-size: 15px;
+    }
+}
+
+
+.consultation {
+    margin: 150px 0;
+}
+
+.consultation .title {
+    margin: 0 auto;
+    max-width: 715px;
+    font-family: Raleway, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 29px;
+    text-align: center;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: #161616;
+}
+
+.consultation .consultation-form {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 250px 250px 170px;
+    justify-content: center;
+    grid-gap: 20px;
+}
+
+.consultation .consultation-form input {
+    text-align: center;
+    height: 55px;
+    width: 100%;
+    background: #EFF0F1;
+    border: none;
+}
+
+.consultation .consultation-form input::placeholder {
+    padding: 20px;
+}
+
+.consultation .consultation-form button {
+    width: 100%;
+    height: 50px;
+    background: #161616;
+    color: white;
+    border: none;
+}
+
+@media (max-width: 800px) {
+    .consultation {
+        margin: 50px 0;
+    }
+
+    .consultation .consultation-form {
+        grid-template-columns: 288px;
+        grid-gap: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .consultation .title {
+        font-size: 18px;
+    }
+}
+
+
+.footer {
+    background-color: black;
+}
+
+.footer .footer-content {
+    display: flex;
+    padding: 30px 0;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.footer .footer-content .item-list {
+    color: white;
+    align-self: center;
+    cursor: pointer;
+}
+
+.footer .footer-content .footer-button button {
+    cursor: pointer;
+    height: 40px;
+    width: 70px;
+    background-color: black;
+    color: white;
+    border: white solid 2px;
+}
+
+@media (max-width: 1200px) {
+    .footer .footer-content {
+        display: grid;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .footer .footer-content .item-list, .footer-button {
+        margin-bottom: 15px;
+    }
+
+    .footer .footer-content .contact {
+        display: none;
+    }
+}
+
