@@ -1,0 +1,63 @@
+@use "color" as c;
+@use 'sass:map';
+@use "sass:color";
+
+$i: 4;
+$ch: chocolate;
+$primary-color: adjust-hue(rgb(255, 0, 0), 25%);
+
+
+$border_weights: (
+    "big" : 5px,
+    "small": 1px,
+    "not_so_small": 2px
+);
+
+* {
+    margin: 0;
+}
+
+@mixin special {
+    background-color: lightblue;
+    //border: map.get($border_weights, "small") solid $primary-color;
+    border: 1px solid $primary-color;
+    color: $ch;
+    
+    padding: 5px;
+}
+
+%h2 {
+    background-color: rgb(45, 26, 82);
+    border: 3px solid $primary-color;
+    color: $primary-color;
+    
+    padding: 10px;
+}
+
+h1{
+    @include special;
+}
+
+h2{
+    @extend %h2;
+}
+
+.main {
+    display: flex;
+    justify-content: space-around;
+    ul {
+        margin-top: 20px;;
+        display: flex;
+        list-style: none;
+            li {
+                width: (500/$i);
+                color: $ch;
+                    a {
+                        &:hover {
+                            color: $primary-color;
+                        }
+                        text-decoration: none; 
+                    }
+            }
+    }
+}
